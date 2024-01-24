@@ -1,18 +1,18 @@
-import { MongoClient } from "mongodb";
+// import { MongoClient } from "mongodb";
 
-const connectionString = process.env.ATLAS_URI || "";
+// const connectionString = process.env.ATLAS_URI || "";
 
-const client = new MongoClient(connectionString)
+// const client = new MongoClient(connectionString)
 
-let conn;
+// let conn;
 
-try {
-    conn = await client.connect();
-    console.log("Successfully connected to MongoDB");
-} catch(err) {
-    console.error(err); 
-}
+// try {
+//     conn = await client.connect();
+//     console.log("Successfully connected to MongoDB");
+// } catch(err) {
+//     console.error(err); 
+// }
 
-let db = conn.db("sample_training");
+// //let db = conn.db("sample_training");
 
-export default db; 
+// export default db; 

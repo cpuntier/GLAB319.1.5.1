@@ -4,8 +4,14 @@ import mongoose from 'mongoose';
 const PORT = process.env.PORT || 5050;
 const app = express();
 
+try {
+    await mongoose.connect(process.env.ATLAS_URI);
+    console.log(mongoose.connection.readyState);
 
-await mongoose.connect(process.env.ATLAS_URI);
+    console.log("Mongoose activated!!");    
+} catch (error) {
+    console.log(error);
+}
 
 app.use(express.json());
 
